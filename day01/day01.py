@@ -11,7 +11,21 @@ print("read " + str(len(lines)) + " lines")
 
 # put your solution here ... 
 
+freq = 0
+d = True
+listoffreq = set()
+listoffreq.add(freq)
 
+while d:
 
+    for line in lines:
+        freq += int(line)
 
-# print the result here
+        if freq in listoffreq:
+            print("The first double frequency is: " + str(freq))
+            d = False
+            break
+        
+        listoffreq.add(freq)
+
+        
